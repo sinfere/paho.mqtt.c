@@ -10,6 +10,7 @@ aclocal.m4
 autoscan.log
 compile
 config*
+!configure.ac
 configure
 depcomp
 install-sh
