@@ -5,7 +5,7 @@ AC_PREREQ([2.69])
 AC_INIT([phao-mqtt-c], [1.2.1], [])
 AC_CONFIG_SRCDIR([test/thread.c])
 AC_CONFIG_HEADERS([config.h])
-AM_INIT_AUTOMAKE([foreign -Wno-gnu -Werror])
+AM_INIT_AUTOMAKE([subdir-objects foreign -Wno-gnu -Werror])
 
 # Checks for programs.
 AC_PROG_CXX

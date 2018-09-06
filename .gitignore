@@ -25,3 +25,10 @@ stamp-h1
 src/gateway*
 src/Makefile
 src/Makefile.in
+
+.libs/
+*.la
+src/.dirstamp
+src/.libs/
+src/*.lo
+src/*.o
