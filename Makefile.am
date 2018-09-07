@@ -1,12 +1,29 @@
 noinst_LTLIBRARIES = libmqtt.la
 
-SOURCE_FILES = $(wildcard src/*.c)
-SOURCE_FILES_C = $(filter-out src/MQTTAsync.c src/MQTTVersion.c src/SSLSocket.c, $(SOURCE_FILES))
-SOURCE_FILES_CS = $(filter-out src/MQTTAsync.c src/MQTTVersion.c, $(SOURCE_FILES))
-SOURCE_FILES_A = $(filter-out src/MQTTClient.c src/MQTTVersion.c src/SSLSocket.c, $(SOURCE_FILES))
-SOURCE_FILES_AS = $(filter-out src/MQTTClient.c src/MQTTVersion.c, $(SOURCE_FILES))
+libmqtt_la_SOURCES = src/MQTTProtocolClient.c \
+    src/Clients.c \
+    src/utf-8.c \
+    src/StackTrace.c \
+    src/MQTTPacket.c \
+    src/MQTTPacketOut.c \
+    src/Messages.c \
+    src/Tree.c \
+    src/Socket.c \
+    src/Log.c \
+    src/MQTTPersistence.c \
+    src/Thread.c \
+    src/MQTTProtocolOut.c \
+    src/MQTTPersistenceDefault.c \
+    src/SocketBuffer.c \
+    src/Heap.c \
+    src/LinkedList.c \
+    src/MQTTProperties.c \
+    src/MQTTReasonCodes.c \
+    src/Base64.c \
+    src/SHA1.c \
+    src/WebSocket.c \
+    src/MQTTAsync.c
 
-libmqtt_la_SOURCES = $(SOURCE_FILES_A)
 libmqtt_la_CFLAGS = -I$(top_srcdir)/libmqtt/src
 
 libmqtt_la_LDFLAGS = -static
